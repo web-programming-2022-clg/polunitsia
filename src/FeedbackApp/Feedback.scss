@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    @apply box-border m-0 p-0;
+}
+
+body {
+    @apply bg-[#666] text-[#fff] leading-relaxed font-sans;
+}
+
+ul {
+    @apply list-none;
+}
+
+.feedback {
+    &-container {
+        @apply max-w-[768px] m-auto p-0 py-[20px];
+    }
+
+    &-card {
+        @apply bg-white text-[#333] rounded-2xl px-[40px] py-[50px] m-0 mx-[20px] relative;
+
+        .reverse {
+            @apply bg-black text-white opacity-40;
+        }
+
+        h2 {
+            @apply text-2xs font-semibold text-center;
+        }
+    }
+
+    &-input-group {
+        @apply flex flex-row border-[1px] border-solid text-[#ccc] py-[8px] px-[10px] rounded-[8px];
+    }
+
+    &-stats {
+        @apply text-white flex justify-between items-center;
+    }
+
+    &-btn {
+        @apply text-white border-0 rounded-[8px] text-white w-[100px] h-[40px] cursor-pointer;
+
+        &-primary {
+            @apply bg-[#202142];
+        }
+
+        &-secondary {
+            @apply bg-[#ff6a95];
+        }
+
+        &:hover {
+            @apply scale-[0.95] opacity-90;
+        }
+
+        &:disabled {
+            @apply bg-[#ccc] text-[#333];
+
+            &:hover {
+                @apply opacity-100;
+            }
+        }
+    }
+}
+
+.message {
+    @apply pt-[10px] text-center text-[rebeccapurple];
+}
+
+.about {
+    &-link {
+        @apply fixed bottom-[20px] right-[20px] text-white cursor-pointer;
+
+        & a {
+            @apply text-[#f0f0f0];
+
+            &:hover {
+                @apply text-[#ff6a95];
+            }
+        }
+    }
+
+    h1 {
+        @apply mb-[20px];
+    }
+
+    p {
+        @apply my-[10px] mx-0;
+    }
+}
+
+header {
+    @apply h-[70px] w-full flex justify-between items-center mb-[30px];
+}
+
+.rating {
+    @apply flex items-center justify-between mt-[30px] mx-0 mb-[40px] md:flex-wrap;
+
+    li {
+        & {
+            @apply md:my-[10px] md:mx-[3px];
+        }
+
+        &,
+        .num-display {
+            @apply relative bg-[#f4f4f4] w-[50px] h-[50px] p-[10px] text-center rounded text-xs border-[1px] border-solid border-[#eee] transition;
+        }
+
+        label {
+            @apply absolute top-1/2 left-1/2 w-[50px] h-[50px] p-[10px] rounded-[50%] transform-cpu cursor-pointer;
+        }
+
+        &:hover,
+        .num-display {
+            @apply bg-[#ff6a95] text-[#fff];
+        }
+    }
+}
+
+input {
+    @apply flex-grow-[2] rounded-none text-xl;
+
+    &:focus {
+        @apply outline-none;
+    }
+
+    .input-group & {
+        @apply md:w-[80%];
+    }
+}
+
+.num-display {
+    @apply absolute -top-[10px] -left-[10px];
+}
+
+.close,
+.edit {
+    @apply absolute top-[10px] right-[20px] cursor-pointer bg-none rounded-none;
+}
+
+.edit {
+    @apply right-[40px];
+}
+
+[type='radio'] {
+    @apply opacity-0;
+
+    &:checked~label {
+        @apply bg-[#ff6a95] text-white;
+    }
+}

@@ -9,7 +9,7 @@ import AboutPage from "./pages/AboutPage";
 import AboutIconLink from "./components/AboutIconLink";
 import {FeedBackProvider} from "./context/FeedbackContext";
 
-import "./Feedback.css"
+import "./Feedback.scss"
 
 
 function FeedbackApp(){

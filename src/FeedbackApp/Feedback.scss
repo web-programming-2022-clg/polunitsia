@@ -96,9 +96,7 @@ header {
     @apply flex items-center justify-between mt-[30px] mx-0 mb-[40px] md:flex-wrap;
 
     li {
-        & {
-            @apply md:my-[10px] md:mx-[3px];
-        }
+        @apply md:my-[10px] md:mx-[3px];
 
         &,
         .num-display {
